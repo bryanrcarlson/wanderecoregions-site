@@ -1,0 +1,30 @@
+---
+title: RMarkdown Test Post
+author: Bryan Carlson
+date: '2018-09-04'
+slug: rmarkdown-test-post
+categories: []
+tags: []
+header:
+  caption: ''
+  image: ''
+---
+
+# Let's roll!
+
+```{r, echo = FALSE, message = FALSE}
+library(tidyverse)
+library(sf)
+library(tmap)
+library(jsonlite)
+```
+
+Load in the shapefile and map it
+
+```{r}
+df <- st_read("../../static/files/gis/wa_eco_l4/wa_eco_l4.shp")
+tmap_mode("view")
+tm_shape(df) + tm_polygons(alpha = 0.6)
+```
+
+Done!
