@@ -9,7 +9,7 @@
 baseurl = "/"
 
 # Title of your site
-title = "Wander Ecoregions"
+title = "The Ecoregion Project"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
@@ -284,10 +284,10 @@ enableGitInfo = false
 #  url = "#teaching"
 #  weight = 5
 
-[[menu.main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 3
+#[[menu.main]]
+#  name = "Contact"
+#  url = "#contact"
+#  weight = 3
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
