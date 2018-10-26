@@ -1,0 +1,7 @@
+```{r}
+foo <- c(1,2,3)
+foo
+
+rmarkdown::render(output_file = "your_file.html")
+```
+
