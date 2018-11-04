@@ -17,7 +17,7 @@ epaWa <- st_read("../../static/files/gis/us_eco_l4_state_boundaries/us_eco_l4.sh
   select(US_L4CODE, US_L4NAME, US_L3NAME)
 ```
 
-# Trips
+# Visited Ecoregions
 
 ```{r, out.width = '100%'}
 visits <- read_csv("../../static/files/database/ecoregion-visits.csv")
@@ -32,7 +32,7 @@ tm_shape(epaWa) +
   tm_polygons(col = "forestgreen", alpha = 0.6)
 ```
 
-# EPA Level IV Ecoregions of Washignton State
+# EPA Level IV Ecoregions of Washington State
 
 ```{r, out.width = '100%'}
 tm_shape(epaWa) +
