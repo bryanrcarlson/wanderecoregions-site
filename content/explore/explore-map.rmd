@@ -8,6 +8,7 @@ knitr::opts_chunk$set(warning = FALSE)
 library(tidyverse)
 library(sf)
 library(tmap)
+library(DT)
 
 tmap_mode("view")
 
@@ -23,4 +24,23 @@ epaWa <- st_read("../../static/files/gis/us_eco_l4_state_boundaries/us_eco_l4.sh
 tm_shape(epaWa) +
   tm_polygons(alpha = 0.4) +
   tm_basemap("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}")
+```
+
+# Public lands 
+
+```{r, out.width = '100%'}
+pubLands <- st_read("../../static/files/gis/WA_Major_Public_Lands_nonDNR/WA_Major_Public_Lands_nonDNR.shp")
+epa.clean <- epaWa %>% 
+  st_transform(4326) %>% st_sf()
+
+pubLands.clean <- pubLands %>% 
+  select(-OBJECTID) %>% 
+  st_transform(4326) %>% st_sf()
+
+landInEco <- st_join(x = pubLands.clean, y = epa.clean) %>% 
+  mutate(ID = as.numeric(row_number()))
+
+dt <- landInEco %>% st_set_geometry(NULL)
+
+datatable(dt)
 ```
