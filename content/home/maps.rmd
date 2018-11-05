@@ -31,10 +31,3 @@ tm_shape(epaWa) +
   tm_shape(epaWaVisited) +
   tm_polygons(col = "forestgreen", alpha = 0.6)
 ```
-
-# EPA Level IV Ecoregions of Washington State
-
-```{r, out.width = '100%'}
-tm_shape(epaWa) +
-  tm_polygons(alpha = 0.4)
-```

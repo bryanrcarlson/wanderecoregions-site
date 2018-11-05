@@ -273,7 +273,12 @@ enableGitInfo = false
   name = "Posts"
   url = "#posts"
   weight = 2
-
+  
+[[menu.main]]
+  name = "Explore"
+  url = "explore"
+  weight = 3
+  
 #[[menu.main]]
 #  name = "Projects"
 #  url = "#projects"

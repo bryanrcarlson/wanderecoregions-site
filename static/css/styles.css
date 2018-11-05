@@ -1,3 +1,7 @@
 .leaflet-popup-content div table {
   font-size: small;
 }
+
+#explore-map {
+  height: 100%;
+}
