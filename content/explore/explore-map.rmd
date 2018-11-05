@@ -21,5 +21,6 @@ epaWa <- st_read("../../static/files/gis/us_eco_l4_state_boundaries/us_eco_l4.sh
 
 ```{r, out.width = '100%'}
 tm_shape(epaWa) +
-  tm_polygons(alpha = 0.4)
+  tm_polygons(alpha = 0.4) +
+  tm_basemap("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}")
 ```
