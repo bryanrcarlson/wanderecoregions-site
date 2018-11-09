@@ -24,11 +24,20 @@ visits <- read_csv("../../static/files/database/ecoregion-visits.csv")
 
 epaWaVisited <- epaWa %>% 
   filter(US_L4CODE %in% visits$US_L4CODE) %>% 
-  full_join(visits)
+  full_join(visits) %>% 
+  select(-latitude, -longitude, -date, -activity)
+
+visitPoints <- visits %>% 
+  select(-US_L4CODE) %>% 
+  st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
+
 
 tm_shape(epaWa) +
   tm_polygons(alpha = 0) +
-  tm_shape(epaWaVisited) +
-  tm_polygons(col = "forestgreen", alpha = 0.6) +
-  tm_basemap(c("Esri.WorldTopoMap", "http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png", "OpenStreetMap"))
+tm_shape(epaWaVisited) +
+  tm_polygons(col = "forestgreen", alpha = 0.3) +
+tm_shape(visitPoints) +
+  tm_dots() +
+tm_basemap(c("Esri.WorldTopoMap", "http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png", "OpenStreetMap"))
+
 ```
