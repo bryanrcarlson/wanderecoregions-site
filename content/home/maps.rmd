@@ -31,7 +31,6 @@ visitPoints <- visits %>%
   select(-US_L4CODE) %>% 
   st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
 
-
 tm_shape(epaWa) +
   tm_polygons(alpha = 0) +
 tm_shape(epaWaVisited) +
