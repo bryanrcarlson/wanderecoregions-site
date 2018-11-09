@@ -30,5 +30,5 @@ tm_shape(epaWa) +
   tm_polygons(alpha = 0) +
   tm_shape(epaWaVisited) +
   tm_polygons(col = "forestgreen", alpha = 0.6) +
-  tm_basemap("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}")
+  tm_basemap(c("Esri.WorldTopoMap", "http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png", "OpenStreetMap"))
 ```
