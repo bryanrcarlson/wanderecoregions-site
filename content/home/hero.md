@@ -24,4 +24,4 @@ weight = 1
 #  label = '<i class="fas fa-download"></i> Install Now'
 +++
 
-One mans dream to experience the ecological diversity of Washington State by exploring all 57 of its ecoregions.
+A man's dream to experience the ecological diversity of Washington State by exploring all 57 of its ecoregions.
