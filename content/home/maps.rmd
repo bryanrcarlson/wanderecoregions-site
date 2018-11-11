@@ -19,7 +19,7 @@ epaWa <- st_read("../../static/files/gis/us_eco_l4_state_boundaries/us_eco_l4.sh
 
 # Visited Ecoregions
 
-Map log detailing EPA Level IV ecoregions (dark lines), those visited (green fill), and trip details (markers).
+Map-log detailing EPA Level IV ecoregions (lines), those visited (green fill), and trip details (markers).
 
 ```{r, out.width = '100%'}
 visits <- read_csv("../../static/files/database/ecoregion-visits.csv")
