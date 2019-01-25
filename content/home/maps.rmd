@@ -32,6 +32,9 @@ epaWaVisited <- epaWa %>%
 visitPoints <- visits %>% 
   select(-US_L4CODE) %>% 
   st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
+# Markers not working... try:
+# * https://github.com/PaulLeCam/react-leaflet/issues/453
+# * https://gis.stackexchange.com/questions/244843/markers-not-being-displayed-on-the-map
 
 tm_shape(epaWa) +
   tm_polygons(alpha = 0) +
