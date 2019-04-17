@@ -41,7 +41,7 @@ tm_shape(epaWa) +
 tm_shape(epaWaVisited) +
   tm_polygons(col = "forestgreen", alpha = 0.3) +
 tm_shape(visitPoints) +
-  tm_dots() +
-tm_basemap(c("Esri.WorldTopoMap", "http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png", "OpenStreetMap"))
+  tm_dots() #+
+#tm_basemap(c("Esri.WorldTopoMap", "http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png", "OpenStreetMap"))
 
 ```
